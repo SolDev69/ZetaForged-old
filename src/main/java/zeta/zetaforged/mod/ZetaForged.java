@@ -1,4 +1,4 @@
-package com.example.examplemod;
+package zeta.zetaforged.mod;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
@@ -18,14 +18,17 @@ import org.apache.logging.log4j.Logger;
 
 import java.util.stream.Collectors;
 
+import static zeta.zetaforged.mod.ZetaForged.MOD_ID;
+
 // The value here should match an entry in the META-INF/mods.toml file
-@Mod("examplemod")
-public class ExampleMod
+@Mod(MOD_ID)
+public class ZetaForged
 {
+    public static final String MOD_ID = "zetaforged";
     // Directly reference a log4j logger.
     private static final Logger LOGGER = LogManager.getLogger();
 
-    public ExampleMod() {
+    public ZetaForged() {
         // Register the setup method for modloading
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
         // Register the enqueueIMC method for modloading
